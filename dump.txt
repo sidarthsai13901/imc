@@ -1,4 +1,4 @@
-# Saved: D:\Boards\RRH Clock\RRH-Clock\Programming\7Oct.txt at Mon Oct 07 14:12:33 2024
+# Saved: D:\Boards\RRH Clock\RRH-Clock\Programming\7Oct.txt at Mon Oct 07 15:11:13 2024
 # The comments below are the steps for implementing glitchless device programming.
 # The function block("0==LOL_PLLx",timeout_seconds = 1) polls the status of the APLLs to determine if they are locked, max 1 s.
 # During this time, TICS Pro usage is blocked.
@@ -776,3 +776,4 @@ block("0==LOL_PLL2", timeout_seconds=1)
 
 # Step 7: Dessert SYNC by writing SYNC_SW = 0, then SYNC_EN = 0 (SYNC_EN = 0 not required).
 0x0015a1
+0x001900
