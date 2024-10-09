@@ -1,4 +1,4 @@
-# Saved: D:\Boards\RRH Clock\RRH-Clock\Programming\9Oct7pm.txt at Wed Oct 09 19:16:58 2024
+# Saved: D:\Boards\RRH Clock\RRH-Clock\Programming\dump.txt at Wed Oct 09 21:06:10 2024
 # The comments below are the steps for implementing glitchless device programming.
 # The function block("0==LOL_PLLx",timeout_seconds = 1) polls the status of the APLLs to determine if they are locked, max 1 s.
 # During this time, TICS Pro usage is blocked.
@@ -48,7 +48,7 @@
 # 	3. Change the state of SWRST
 # These registers have already been excluded from register generation via commenting.
 0x001300
-0x001400
+0x001428
 0x001614
 0x001806
 0x001A01
@@ -523,18 +523,18 @@
 0x02C73C
 0x02C8FF
 0x02C900
-0x02CA03
+0x02CA02
 0x02CB10
 0x02CC00
-0x02CDBB
+0x02CDA2
 0x02CE44
-0x02CF58
-0x02D000
-0x02D100
-0x02D200
-0x02D300
+0x02CFAD
+0x02D044
+0x02D144
+0x02D244
+0x02D344
 0x02D437
-0x02DBA8
+0x02DB28
 0x02DC28
 0x02DDA9
 0x02E000
@@ -547,16 +547,16 @@
 0x030D02
 0x030EFF
 0x030F00
-0x03100A
-0x03110E
-0x031200
-0x031302
-0x031426
-0x0315AC
-0x0316F0
+0x03107B
+0x03111A
+0x031201
+0x03131F
+0x031461
+0x031547
+0x0316BB
 0x031780
-0x031807
-0x0319E1
+0x031800
+0x031911
 0x031A06
 0x032340
 0x03241C
@@ -583,15 +583,15 @@
 0x035800
 0x035905
 0x03607C
-0x0361B8
+0x0361B9
 0x036200
 0x036800
 0x03C703
 0x03C800
-0x03C902
+0x03C903
 0x03CB40
 0x03CC00
-0x03CD32
+0x03CD3E
 0x03CE00
 0x03CF00
 0x03D000
@@ -639,7 +639,7 @@
 0x045300
 0x045410
 0x046500
-0x046620
+0x046600
 0x046700
 0x046800
 0x046900
@@ -741,7 +741,7 @@ block("0==LOL_PLL2", timeout_seconds=1)
 # Step 6. Write the output registers to their proper states.
 0x03c14e
 0x03c234
-0x03c328
+0x03c314
 0x03c44e
 0x03c534
 0x03c628
@@ -776,3 +776,4 @@ block("0==LOL_PLL2", timeout_seconds=1)
 
 # Step 7: Dessert SYNC by writing SYNC_SW = 0, then SYNC_EN = 0 (SYNC_EN = 0 not required).
 0x0015a1
+0x001900
